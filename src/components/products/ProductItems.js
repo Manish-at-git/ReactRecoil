@@ -7,7 +7,7 @@ function ProductItems(props) {
   const [products, setProduct] = useRecoilState(productState);
 
   const deleteItem = (id) => {
-    const newProductList = products.filter((item) => item.id != id);
+    const newProductList = products.filter((item) => item.id !== id);
     setProduct(newProductList);
   };
   return (

@@ -782,7 +782,7 @@ export const filteredProducts = selector({
     filteredProducts = products
       .filter((product) => product.name.includes(searchText))
       .filter((product) =>
-        filterItem == "" ? true : product.type == filterItem
+        filterItem === "" ? true : product.type === filterItem
       );
 
     return filteredProducts;

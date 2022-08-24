@@ -22,7 +22,7 @@ function EditProduct() {
     };
 
     const updated_products = products.map((item) =>
-      item.id == id ? new_product : item
+      item.id === id ? new_product : item
     );
 
     setProducts(updated_products);
@@ -33,12 +33,12 @@ function EditProduct() {
   };
 
   useEffect(() => {
-    const product = products.find((item) => item.id == id);
+    const product = products.find((item) => item.id === id);
     setName(product.name);
     setPrice(product.price);
     setPicture(product.picture);
     setType(product.type);
-  }, []);
+  }, [id, products]);
 
   return (
     <div className="container">
